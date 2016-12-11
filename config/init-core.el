@@ -7,8 +7,16 @@
 (save-place-mode 1)
 
 (setq scroll-step 1)
+(setq scroll-conservatively  10000)
 
 (setq tab-width 4)
+
+
+
+(when (eq pair-engine 'emacs)
+  (electric-pair-mode t)
+  (add-hook 'minibuffer-setup-hook (lambda () (electric-pair-mode -1)))
+  (add-hook 'minibuffer-exit-hook (lambda () (electric-pair-mode t))))
 
 
 ; Autosave to folder
