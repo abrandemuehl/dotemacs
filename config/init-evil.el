@@ -36,7 +36,7 @@
 
 (require-package 'evil-numbers)
 
-(fset 'evil-visual-update-x-selection 'ignore)
-
-(setq x-select-enable-clipboard t)
+; (setq x-select-enable-clipboard t)
 ; (setq save-interprogram-paste-before-kill t)
+
+; (setq x-select-enable-clipboard nil)

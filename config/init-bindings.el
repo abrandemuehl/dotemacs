@@ -21,6 +21,7 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 )
 
 (after 'evil
+   (define-key evil-normal-state-map (kbd "K") nil)
    (define-key evil-normal-state-map [escape] 'keyboard-quit)
    (define-key evil-visual-state-map [escape] 'keyboard-quit)
    (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)

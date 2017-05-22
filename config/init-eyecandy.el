@@ -30,15 +30,18 @@
 (after 'projectile (diminish 'projectile-mode))
 (after 'evil-commentary (diminish 'evil-commentary-mode))
 (after 'smartparens (diminish 'smartparens-mode))
+(after 'editorconfig (diminish 'editorconfig-mode))
 
 
-; (require 'powerline)
-; (setq powerline-default-separator 'alternate)
-; (setq spaceline-separator-dir-left '(left . left))
-; (setq spaceline-separator-dir-right '(right . right))
-(require-package 'spaceline)
-(require 'spaceline-config)
-(setq spaceline-highlight-face-func #'spaceline-highlight-face-evil-state)
-(spaceline-emacs-theme)
-(spaceline-info-mode)
-(spaceline-compile)
+(require-package 'powerline)
+
+(require 'powerline)
+(require-package 'smart-mode-line)
+(require 'smart-mode-line)
+
+
+(setq powerline-default-separator 'curve)
+(setq powerline-default-separator-dir '(left . right))
+(setq sml/no-confirm-load-theme t)
+(setq sml/theme 'powerline)
+(sml/setup)
